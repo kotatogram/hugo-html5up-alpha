@@ -1,5 +1,6 @@
 @import url("css/fontawesome-all.min.css");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
+@import url("css/roboto.css");
+@import url("css/roboto-mono.css");
 
 /*
 	Alpha by HTML5 UP
@@ -110,7 +111,7 @@
 
 	body, input, select, textarea {
 		color: #777;
-		font-family: "Source Sans Pro", sans-serif;
+		font-family: "Roboto", sans-serif;
 		font-size: 16pt;
 		font-weight: 300;
 		line-height: 1.65em;
