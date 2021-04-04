@@ -14,7 +14,7 @@
             {{ if $data.homepage.banner.enable }}
             {{ with $data.homepage.banner }}
                 <h2>{{ .title }}</h2>
-                <p>{{ with .content }}{{ . }}{{else}}{{ $.Site.Params.description }}{{end}}</p>
+                <p>{{ with .content }}{{ . | markdownify }}{{else}}{{ $.Site.Params.description }}{{end}}</p>
                 <ul class="actions special">
                 {{ range .buttons }}
                     <li><a href="{{ .link }}" class="button {{ .class }}">{{ .title }}</a></li>
