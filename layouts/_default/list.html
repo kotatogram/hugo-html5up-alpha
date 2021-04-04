@@ -1,5 +1,6 @@
 {{ define "main" }}
-{{ $blogSettings := .Site.Data.homepage.blog }}
+{{ $data := index .Site.Data .Site.Language.Lang }}
+{{ $blogSettings := $data.homepage.blog }}
   <header>
     <h2>{{ .Title }}</h2>
   </header>

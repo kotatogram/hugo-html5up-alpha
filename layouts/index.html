@@ -1,3 +1,4 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,8 +11,8 @@
 
             <!-- Banner -->
             <section id="banner">
-            {{ if .Site.Data.homepage.banner.enable }}
-            {{ with .Site.Data.homepage.banner }}
+            {{ if $data.homepage.banner.enable }}
+            {{ with $data.homepage.banner }}
                 <h2>{{ .title }}</h2>
                 <p>{{ with .content }}{{ . }}{{else}}{{ $.Site.Params.description }}{{end}}</p>
                 <ul class="actions special">
@@ -26,8 +27,8 @@
             <!-- Main -->
             <section id="main" class="container">
                 <!-- Highlight -->
-                {{ if .Site.Data.homepage.highlight.enable }}
-                {{ with .Site.Data.homepage.highlight }}
+                {{ if $data.homepage.highlight.enable }}
+                {{ with $data.homepage.highlight }}
                     <section class="box special">
                         <header class="major">
                             {{/* Include 'safeHTML' function to render the HTML in strings */}}
@@ -42,8 +43,8 @@
                 {{ end }}
 
                 <!-- Features -->
-                {{ if .Site.Data.homepage.features.enable }}
-                {{ with .Site.Data.homepage.features }}
+                {{ if $data.homepage.features.enable }}
+                {{ with $data.homepage.features }}
                     <section class="box special features">
                         {{ range .rows }}
                         <div class="features-row">
@@ -61,8 +62,8 @@
                 {{ end }}
 
                 <!-- Posts -->
-                {{ if .Site.Data.homepage.blog.enable }}
-                {{ with $blogSettings := .Site.Data.homepage.blog }}
+                {{ if $data.homepage.blog.enable }}
+                {{ with $blogSettings := $data.homepage.blog }}
                   {{ with .header }}
                   <header class="major">
                       <h2>{{ . }}</h2>
@@ -94,8 +95,8 @@
             </section>
 
             <!-- CTA -->
-            {{ if .Site.Data.homepage.cta.enable }}
-            {{ with .Site.Data.homepage.cta}}
+            {{ if $data.homepage.cta.enable }}
+            {{ with $data.homepage.cta}}
                 <section id="cta">
                     <h2>{{ .header }}</h2>
                     <p>{{ .content }}</p>
