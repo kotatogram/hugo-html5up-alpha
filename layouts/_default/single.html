@@ -17,4 +17,9 @@
     {{ template "_internal/disqus.html" . }}
   </div>
   {{ end }}
+  {{ if .Site.Params.tgCommentsSiteId }}
+  <div class="box">
+    <script async src="https://comments.app/js/widget.js?3" data-comments-app-website="{{ .Site.Params.tgCommentsSiteId }}" data-limit="5" data-color="7953B1" data-dislikes="1" data-colorful="1"></script>
+  </div>
+  {{ end }}
 {{ end }}
