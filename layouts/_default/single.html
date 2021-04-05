@@ -1,6 +1,9 @@
 {{ define "main" }}
   <header>
     <h2>{{ .Title }}</h2>
+    {{ with .Param "description" }}
+    <p>{{ . }}</p>
+    {{ end }}
     {{ with .Date }}
     <p>{{ .Format "Jan 2, 2006" }}</p>
     {{ end }}
