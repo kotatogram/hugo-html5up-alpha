@@ -16,6 +16,22 @@
                 {{- end -}}
             </li>
             {{- end -}}
+            {{ if eq (len .Translations) 1}}
+            <li>
+                {{- range .Translations -}}
+                <a class="icon solid fa-language" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+                {{- end -}}
+            </li>
+            {{ else if gt (len .Translations) 1}}
+            <li>
+                <a class="icon solid fa-language" href="#">Language</a>
+                <ul>
+                    {{- range .Translations -}}
+                    <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+                    {{- end -}}
+                </ul>
+            </li>
+            {{ end }}
             {{ $button := $data.globalheader.button }}
             {{ if $button.enable }}
             <li><a href="{{ $button.link }}" class="button">{{ $button.title }}</a></li>
