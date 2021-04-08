@@ -2130,3 +2130,13 @@ $bannerURL: "{{ ($data.homepage.banner.image | default "images/banner.jpg") }}";
 			}
 
 	}
+
+/* 
+ * Adapted from Stack Overflow:
+ * https://stackoverflow.com/a/51071591/5467282
+ */
+
+:target {
+	padding-top: 3.25em;
+	margin-top: -3.25em;
+}
