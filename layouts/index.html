@@ -99,7 +99,7 @@
                                   <span class="image featured"><img src="{{ . }}" alt="" /></span>
                                   {{ end }}
                                   <h3>{{ .Title }}</h3>
-                                  {{ with .Date }}<p>{{ .Format "Jan 2, 2006" }}</p>{{ end }}
+                                  {{ with .Date }}<p>{{ .Format $.Site.Params.dateFormat }}</p>{{ end }}
                                   {{ with .Description }}
                                   <p>{{ . }}</p>
                                   {{ else }}

@@ -5,7 +5,9 @@
     <p>{{ . }}</p>
     {{ end }}
     {{ with .Date }}
-    <p>{{ .Format "Jan 2, 2006" }}</p>
+    <div><strong>{{ $.Site.Params.publishedOnStr }}</strong>{{ .Format $.Site.Params.dateFormat }}</div>
+    {{ end }}
+    {{ with .Param "tags" }}
     {{ end }}
   </header>
   <div class="box">
