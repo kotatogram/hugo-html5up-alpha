@@ -168,7 +168,7 @@ $bannerURL: "{{ ($data.homepage.banner.image | default "images/banner.jpg") }}";
 
 	h1, h2, h3, h4, h5, h6 {
 		color: _palette(fg-bold);
-		font-weight: _font(weight);
+		font-weight: _font(weight-bold);
 		line-height: 1em;
 		margin: 0 0 (_size(element-margin) * 0.25) 0;
 
@@ -365,7 +365,6 @@ $bannerURL: "{{ ($data.homepage.banner.image | default "images/banner.jpg") }}";
 			color: _palette(fg-light);
 			position: relative;
 			margin: 0 0 (_size(element-margin) * 0.75) 0;
-			font-style: italic;
 		}
 
 		h2 + p {
@@ -1383,12 +1382,12 @@ $bannerURL: "{{ ($data.homepage.banner.image | default "images/banner.jpg") }}";
 /* Banner */
 
 	#banner {
-		background-attachment:	scroll,							fixed;
+		background-attachment:	fixed;
 		background-color:		#666;
 		background-image:		url($bannerURL);
-		background-position:	top left,						center center;
-		background-repeat:		repeat,							no-repeat;
-		background-size:		auto,							cover;
+		background-position:	center center;
+		background-repeat:		no-repeat;
+		background-size:		cover;
 		color: #fff;
 		padding: 12em 0 20em 0;
 		text-align: center;
@@ -1542,8 +1541,13 @@ $bannerURL: "{{ ($data.homepage.banner.image | default "images/banner.jpg") }}";
 		input[type="button"],
 		.button {
 			box-shadow: none;
+			color: _palette(accent2, fg-bold);
+			background: rgba(255,255,255,0.15);
+		}
+
+		.button.primary {
 			background: #fff;
-			color: _palette(accent2, bg);
+			color: _palette(accent2, bg) !important;
 		}
 
 		input[type="text"],

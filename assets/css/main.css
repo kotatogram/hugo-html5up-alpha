@@ -113,7 +113,7 @@
 		color: #777;
 		font-family: "Roboto", sans-serif;
 		font-size: 16pt;
-		font-weight: 300;
+		font-weight: 400;
 		line-height: 1.65em;
 		letter-spacing: -0.015em;
 	}
@@ -134,7 +134,7 @@
 
 	strong, b {
 		color: #646464;
-		font-weight: 400;
+		font-weight: 700;
 	}
 
 	em, i {
@@ -147,7 +147,7 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #646464;
-		font-weight: 300;
+		font-weight: 400;
 		line-height: 1em;
 		margin: 0 0 0.5em 0;
 	}
@@ -2073,7 +2073,7 @@
 		color: #646464;
 		display: block;
 		font-size: 0.9em;
-		font-weight: 300;
+		font-weight: 400;
 		margin: 0 0 1em 0;
 	}
 
@@ -2169,7 +2169,7 @@
 			cursor: pointer;
 			display: inline-block;
 			font-size: 1em;
-			font-weight: 300;
+			font-weight: 400;
 			padding-left: 2.55em;
 			padding-right: 0.75em;
 			position: relative;
@@ -2694,7 +2694,7 @@
 		table th {
 			color: #646464;
 			font-size: 0.9em;
-			font-weight: 300;
+			font-weight: 400;
 			padding: 0 0.75em 0.75em 0.75em;
 			text-align: left;
 		}
@@ -2753,7 +2753,7 @@
 		color: #ffffff;
 		cursor: pointer;
 		display: inline-block;
-		font-weight: 400;
+		font-weight: 700;
 		height: 3em;
 		line-height: 3em;
 		padding: 0 2em;
@@ -2957,7 +2957,7 @@
 
 			#header h1 a {
 				color: #fff;
-				font-weight: 400;
+				font-weight: 700;
 				border: 0;
 			}
 
