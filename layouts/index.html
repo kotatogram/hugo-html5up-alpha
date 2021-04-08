@@ -66,6 +66,23 @@
                 {{ end }}
                 {{ end }}
 
+                <!-- CTA -->
+                {{ if $data.homepage.cta.enable }}
+                {{ with $data.homepage.cta}}
+                    <section id="cta">
+                        <h2>{{ .header }}</h2>
+                        <p>{{ .content }}</p>
+                        <ul class="actions special">
+                        {{ range .buttons }}
+                            <li>
+                              <a href="{{ .link }}" class="button {{ .class }}">{{ .title }}</a>
+                            </li>
+                        {{ end }}
+                        </ul>
+                    </section>
+                {{ end }}
+                {{ end }}
+
                 <!-- Posts -->
                 {{ if $data.homepage.blog.enable }}
                 {{ with $blogSettings := $data.homepage.blog }}
@@ -98,26 +115,6 @@
                 {{ end }}
                 {{ end }}
             </section>
-
-            <!-- CTA -->
-            {{ if $data.homepage.cta.enable }}
-            {{ with $data.homepage.cta}}
-                <section id="cta">
-                    <h2>{{ .header }}</h2>
-                    <p>{{ .content }}</p>
-                    <form>
-                        <div class="row gtr-50 gtr-uniform">
-                            <div class="col-8 col-12-mobilep">
-                                <input type="email" name="email" id="email" placeholder="Email Address" />
-                            </div>
-                            <div class="col-4 col-12-mobilep">
-                                <input type="submit" value="Sign Up" class="fit" />
-                            </div>
-                        </div>
-                    </form>
-                </section>
-            {{ end }}
-            {{ end }}
 
             {{- partial "footer.html" . -}}
         </div>
