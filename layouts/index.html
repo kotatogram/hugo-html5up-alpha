@@ -17,7 +17,12 @@
                 <p>{{ with .content }}{{ . | markdownify }}{{else}}{{ $.Site.Params.description }}{{end}}</p>
                 <ul class="actions special">
                 {{ range .buttons }}
-                    <li><a href="{{ .link }}" class="button {{ .class }}">{{ .title }}</a></li>
+                    <li>
+                      <a href="{{ .link }}" class="button {{ .class }}">
+                        <span class="title {{ .titleClass }}">{{ .title }}</span>
+                        <span class="subtitle">{{ .subtitle }}</span>
+                      </a>
+                    </li>
                 {{ end }}
                 </ul>
             {{ end }}
